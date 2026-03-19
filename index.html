@@ -49,7 +49,7 @@
                         brand: {
                             50: '#f4f9fb',   
                             100: '#e1f0f7',
-                            500: '#004866',  // Deep Blue
+                            500: '#004866',  // Deep Blue Core
                             600: '#003a52',
                             700: '#002d40',
                             800: '#001f2b',
@@ -64,6 +64,7 @@
                     animation: {
                         'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
                         'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'scroll': 'scroll 60s linear infinite',
                     },
                     keyframes: {
@@ -77,7 +78,7 @@
                         },
                         scroll: {
                             '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(calc(-380px * 5 - 2rem * 5))' }
+                            '100%': { transform: 'translateX(calc(-400px * 5 - 2rem * 5))' }
                         }
                     }
                 }
@@ -109,8 +110,9 @@
             flex-shrink: 0; 
             background: #f8fafc; 
             border-radius: 1.5rem; 
-            padding: 2rem; 
+            padding: 2.5rem; 
             border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
         .reviews-container:hover .reviews-slider { animation-play-state: paused; }
     </style>
@@ -126,8 +128,8 @@
                 <span>Free Expedited Shipping Included</span>
             </div>
             <div class="w-px h-3 bg-white/20"></div>
-            <div class="flex items-center gap-1.5">
-                <svg class="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <div class="flex items-center gap-1.5 text-accent-500">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                 <span>60-Day Money Back Guarantee</span>
             </div>
         </div>
@@ -142,8 +144,8 @@
             </a>
             <div class="hidden lg:flex space-x-8 text-[11px] font-bold text-brand-900 uppercase tracking-widest">
                 <a href="#benefits" class="hover:text-brand-500 transition-colors">Benefits</a>
-                <a href="#ingredients" class="hover:text-brand-500 transition-colors">Ingredients</a>
                 <a href="#reviews" class="hover:text-brand-500 transition-colors">Reviews</a>
+                <a href="#ingredients" class="hover:text-brand-500 transition-colors">Ingredients</a>
                 <a href="#faq" class="hover:text-brand-500 transition-colors">FAQ</a>
             </div>
             <a href="https://69f18fmdtp4ydyec2e4fgonkpx.hop.clickbank.net" class="bg-brand-500 text-white px-7 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-700 transition-all shadow-md">
@@ -170,14 +172,10 @@
                         Take back control of your daily comfort and routine starting today with our precision-engineered natural formula.
                     </p>
 
-                    <div class="mt-10 flex flex-col sm:flex-row items-center gap-6 animate-fade-in-up delay-150">
+                    <div class="mt-10 flex justify-center lg:justify-start animate-fade-in-up delay-150">
                         <a href="https://69f18fmdtp4ydyec2e4fgonkpx.hop.clickbank.net" class="inline-flex items-center justify-center w-full sm:w-auto px-12 py-5 bg-brand-500 text-white rounded-full text-lg font-black uppercase tracking-tight shadow-xl hover:scale-105 transition-all duration-300 cta-pulse">
-                            Claim 70% Off Now
+                            Claim 50% Off Now
                         </a>
-                        <div class="flex flex-col items-center sm:items-start border-l-0 sm:border-l-2 border-brand-100 pl-0 sm:pl-4">
-                            <span class="text-xs font-black text-brand-900 uppercase">Limited Supply</span>
-                            <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Authorized Distributor</span>
-                        </div>
                     </div>
                 </div>
 
@@ -200,34 +198,34 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div class="bg-brand-900 text-white p-10 rounded-[2.5rem] shadow-xl relative overflow-hidden">
+                <div class="bg-brand-900 text-white p-10 rounded-[2.5rem] shadow-xl relative overflow-hidden text-left">
                     <div class="absolute -top-10 -right-10 w-48 h-48 bg-brand-500/20 rounded-full blur-[60px]"></div>
                     <h3 class="text-2xl font-display font-black mb-8 text-accent-500">The Daily Challenge:</h3>
                     <ul class="space-y-6">
-                        <li class="flex items-start gap-4">
+                        <li class="flex items-start gap-4 text-left">
                             <div class="mt-1 w-5 h-5 rounded-full border-2 border-brand-500 flex items-center justify-center shrink-0">
                                 <div class="w-2 h-2 bg-brand-500 rounded-full"></div>
                             </div>
-                            <span class="font-bold opacity-90">Interrupted sleep draining your energy</span>
+                            <span class="font-bold opacity-90 text-left text-white">Interrupted sleep draining your energy</span>
                         </li>
-                        <li class="flex items-start gap-4">
+                        <li class="flex items-start gap-4 text-left">
                             <div class="mt-1 w-5 h-5 rounded-full border-2 border-brand-500 flex items-center justify-center shrink-0">
                                 <div class="w-2 h-2 bg-brand-500 rounded-full"></div>
                             </div>
-                            <span class="font-bold opacity-90">Constant discomfort affecting focus</span>
+                            <span class="font-bold opacity-90 text-left text-white">Constant discomfort affecting focus</span>
                         </li>
-                        <li class="flex items-start gap-4">
+                        <li class="flex items-start gap-4 text-left">
                             <div class="mt-1 w-5 h-5 rounded-full border-2 border-brand-500 flex items-center justify-center shrink-0">
                                 <div class="w-2 h-2 bg-brand-500 rounded-full"></div>
                             </div>
-                            <span class="font-bold opacity-90">The quiet loss of your daily freedom</span>
+                            <span class="font-bold opacity-90 text-left text-white">The quiet loss of your daily freedom</span>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="flex flex-col justify-center gap-8 text-left">
                     <h3 class="text-3xl font-display font-black text-brand-950 leading-tight">Professional Support <br>For Your Body</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed">
+                    <p class="text-lg text-gray-700 leading-relaxed font-medium">
                         Prostate Max is a premium daily support formula designed to help you maintain a comfortable, normal routine. No complicated treatments. Just consistent natural support.
                     </p>
                     <div class="grid grid-cols-2 gap-4">
@@ -245,7 +243,58 @@
         </div>
     </section>
 
-    <!-- INGREDIENTS -->
+    <!-- REVIEWS SECTION (MOVED UP) -->
+    <section id="reviews" class="py-24 bg-white overflow-hidden border-t border-brand-50">
+        <div class="max-w-7xl mx-auto px-4 mb-12 text-center">
+            <h2 class="text-4xl font-display font-black text-brand-950 tracking-tight">Trusted by Thousands Daily</h2>
+            <p class="mt-3 text-gray-500 font-bold uppercase tracking-widest text-xs">Verified feedback from our community</p>
+        </div>
+
+        <!-- AUTHORITY IMAGE -->
+        <div class="max-w-5xl mx-auto px-4 mb-16 reveal-on-scroll">
+            <div class="rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100">
+                <img src="images/reviewss.png" alt="Prostate Max Success Stories" class="w-full h-auto object-cover" onerror="this.src='reviewss.jpg';">
+            </div>
+        </div>
+        
+        <!-- INFINITE CAROUSEL - NO BOLD TEXT -->
+        <div class="reviews-container">
+            <div class="reviews-slider animate-scroll">
+                <!-- REVIEW 1 -->
+                <div class="review-card">
+                    <div class="flex text-accent-500 mb-5 text-xs font-black gap-1 tracking-widest uppercase">★★★★★ Fast Shipping</div>
+                    <p class="text-brand-900 leading-relaxed mb-6 italic text-base text-left">"Shipping was incredibly fast. I ordered on Monday and it was at my door by Wednesday. This has finally helped me sleep through the night without three trips to the bathroom."</p>
+                    <p class="font-bold text-brand-500 text-sm text-left">— Mark R., Texas</p>
+                </div>
+                <!-- REVIEW 2 -->
+                <div class="review-card">
+                    <div class="flex text-accent-500 mb-5 text-xs font-black gap-1 tracking-widest uppercase">★★★★★ Real Results</div>
+                    <p class="text-brand-900 leading-relaxed mb-6 italic text-base text-left">"I was skeptical about the 60-day guarantee, but I didn't even need it. After two weeks, the constant urgency is gone. I feel way more confident at work."</p>
+                    <p class="font-bold text-brand-500 text-sm text-left">— James L., Florida</p>
+                </div>
+                <!-- REVIEW 3 -->
+                <div class="review-card">
+                    <div class="flex text-accent-500 mb-5 text-xs font-black gap-1 tracking-widest uppercase">★★★★★ Best Choice</div>
+                    <p class="text-brand-900 leading-relaxed mb-6 italic text-base text-left">"Back in control. I no longer have to scan every room for the exit or plan my road trips around rest stops. Simple morning routine, massive daily impact."</p>
+                    <p class="font-bold text-brand-500 text-sm text-left">— Arthur P., Ohio</p>
+                </div>
+                <!-- REVIEW 4 -->
+                <div class="review-card">
+                    <div class="flex text-accent-500 mb-5 text-xs font-black gap-1 tracking-widest uppercase">★★★★★ Pure Quality</div>
+                    <p class="text-brand-900 leading-relaxed mb-6 italic text-base text-left">"Arrived in discrete packaging. The quality of the natural ingredients is obvious—I don't feel 'heavy' or slow anymore. A clean, effective supplement."</p>
+                    <p class="font-bold text-brand-500 text-sm text-left">— Robert K., California</p>
+                </div>
+                <!-- DUPLICATES -->
+                <div class="review-card">
+                    <div class="flex text-accent-500 mb-5 text-xs font-black gap-1 tracking-widest uppercase">★★★★★ Fast Shipping</div>
+                    <p class="text-brand-900 leading-relaxed mb-6 italic text-base text-left">"Shipping was incredibly fast. I ordered on Monday and it was at my door by Wednesday."</p>
+                    <p class="font-bold text-brand-500 text-sm text-left">— Mark R., Texas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INGREDIENTS SECTION -->
     <section id="ingredients" class="py-24 bg-brand-50 reveal-on-scroll border-y border-brand-100/50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -256,82 +305,30 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="group bg-white p-8 rounded-3xl border border-transparent hover:border-brand-500 transition-all shadow-sm text-left">
                     <div class="w-12 h-12 bg-brand-500 text-white rounded-xl flex items-center justify-center mb-6 font-black text-lg">01</div>
-                    <h5 class="text-lg font-black text-brand-900 mb-3">Saw Palmetto</h5>
-                    <p class="text-sm text-gray-600 leading-relaxed font-medium">Supports healthy prostate function and size maintenance.</p>
+                    <h5 class="text-lg font-black text-brand-900 mb-3 text-left">Saw Palmetto</h5>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium text-left">Supports healthy prostate function and size maintenance.</p>
                 </div>
                 <div class="group bg-white p-8 rounded-3xl border border-transparent hover:border-brand-500 transition-all shadow-sm text-left">
                     <div class="w-12 h-12 bg-brand-500 text-white rounded-xl flex items-center justify-center mb-6 font-black text-lg">02</div>
-                    <h5 class="text-lg font-black text-brand-900 mb-3">Pumpkin Seed</h5>
-                    <p class="text-sm text-gray-600 leading-relaxed font-medium">Rich in nutrients that encourage natural urinary comfort.</p>
+                    <h5 class="text-lg font-black text-brand-900 mb-3 text-left">Pumpkin Seed</h5>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium text-left">Rich in nutrients that encourage natural urinary comfort.</p>
                 </div>
                 <div class="group bg-white p-8 rounded-3xl border border-transparent hover:border-brand-500 transition-all shadow-sm text-left">
                     <div class="w-12 h-12 bg-brand-500 text-white rounded-xl flex items-center justify-center mb-6 font-black text-lg">03</div>
-                    <h5 class="text-lg font-black text-brand-900 mb-3">Zinc</h5>
-                    <p class="text-sm text-gray-600 leading-relaxed font-medium">An essential mineral contributing to normal male vitality.</p>
+                    <h5 class="text-lg font-black text-brand-900 mb-3 text-left">Zinc</h5>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium text-left">An essential mineral contributing to normal male vitality.</p>
                 </div>
                 <div class="group bg-white p-8 rounded-3xl border border-transparent hover:border-brand-500 transition-all shadow-sm text-left">
                     <div class="w-12 h-12 bg-brand-500 text-white rounded-xl flex items-center justify-center mb-6 font-black text-lg">04</div>
-                    <h5 class="text-lg font-black text-brand-900 mb-3">Plant Sterols</h5>
-                    <p class="text-sm text-gray-600 leading-relaxed font-medium">Botanical support for daily wellness and hormonal balance.</p>
+                    <h5 class="text-lg font-black text-brand-900 mb-3 text-left">Plant Sterols</h5>
+                    <p class="text-sm text-gray-600 leading-relaxed font-medium text-left">Botanical support for daily wellness and hormonal balance.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- REVIEWS SECTION -->
-    <section id="reviews" class="py-24 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 mb-12 text-center">
-            <h2 class="text-4xl font-display font-black text-brand-950 tracking-tight">Trusted by Thousands Daily</h2>
-            <p class="mt-3 text-gray-500 font-bold uppercase tracking-widest text-xs">Verified feedback from our community</p>
-        </div>
-
-        <!-- AUTHORITY IMAGE -->
-        <div class="max-w-5xl mx-auto px-4 mb-16 reveal-on-scroll">
-            <div class="rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100">
-                <img src="images/reviewss.jpg" alt="Prostate Max Success Stories" class="w-full h-auto object-cover">
-            </div>
-        </div>
-        
-        <!-- INFINITE CAROUSEL - CLEAN -->
-        <div class="reviews-container">
-            <div class="reviews-slider animate-scroll">
-                <!-- REVIEW 1 -->
-                <div class="review-card">
-                    <div class="flex text-accent-500 mb-5 text-xs font-black gap-1 tracking-widest uppercase">★★★★★ Fast Shipping</div>
-                    <p class="text-brand-950 font-bold leading-relaxed mb-6 italic text-base">"Shipping was incredibly fast. I ordered on Monday and it was at my door by Wednesday. This has finally helped me sleep through the night without three trips to the bathroom."</p>
-                    <p class="font-bold text-brand-500 text-sm">— Mark R., Texas</p>
-                </div>
-                <!-- REVIEW 2 -->
-                <div class="review-card">
-                    <div class="flex text-accent-500 mb-5 text-xs font-black gap-1 tracking-widest uppercase">★★★★★ Real Results</div>
-                    <p class="text-brand-950 font-bold leading-relaxed mb-6 italic text-base">"I was skeptical about the 60-day guarantee, but I didn't even need it. After two weeks, the constant urgency is gone. I feel way more confident at work."</p>
-                    <p class="font-bold text-brand-500 text-sm">— James L., Florida</p>
-                </div>
-                <!-- REVIEW 3 -->
-                <div class="review-card">
-                    <div class="flex text-accent-500 mb-5 text-xs font-black gap-1 tracking-widest uppercase">★★★★★ Best Choice</div>
-                    <p class="text-brand-950 font-bold leading-relaxed mb-6 italic text-base">"Back in control. I no longer have to scan every room for the exit or plan my road trips around rest stops. Simple morning routine, massive daily impact."</p>
-                    <p class="font-bold text-brand-500 text-sm">— Arthur P., Ohio</p>
-                </div>
-                <!-- REVIEW 4 -->
-                <div class="review-card">
-                    <div class="flex text-accent-500 mb-5 text-xs font-black gap-1 tracking-widest uppercase">★★★★★ Pure Quality</div>
-                    <p class="text-brand-950 font-bold leading-relaxed mb-6 italic text-base">"Arrived in discrete packaging. The quality of the natural ingredients is obvious—I don't feel 'heavy' or slow anymore. A clean, effective supplement."</p>
-                    <p class="font-bold text-brand-500 text-sm">— Robert K., California</p>
-                </div>
-
-                <!-- DUPLICATES FOR INFINITE LOOP -->
-                <div class="review-card">
-                    <div class="flex text-accent-500 mb-5 text-xs font-black gap-1 tracking-widest uppercase">★★★★★ Fast Shipping</div>
-                    <p class="text-brand-950 font-bold leading-relaxed mb-6 italic text-base">"Shipping was incredibly fast. I ordered on Monday and it was at my door by Wednesday."</p>
-                    <p class="font-bold text-brand-500 text-sm">— Mark R., Texas</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- QUALITY SEALS (COLORFUL & 4 IN A ROW) -->
-    <div class="bg-brand-50 py-16 border-y border-brand-100/50">
+    <!-- QUALITY SEALS -->
+    <div class="bg-white py-16 border-y border-brand-100/50">
         <div class="max-w-3xl mx-auto px-4">
             <div class="grid grid-cols-4 gap-4 sm:gap-8 items-center justify-items-center">
                 <img src="images/imgi_8_usa-1-1-2-1.png" alt="Made in USA" class="w-full h-auto max-w-[80px] lg:max-w-[100px] transition-transform hover:scale-105">
@@ -346,10 +343,10 @@
     <section class="py-24 bg-white reveal-on-scroll">
         <div class="max-w-4xl mx-auto px-4">
             <div class="bg-brand-50 rounded-[3rem] p-10 lg:p-16 shadow-lg border-b-8 border-brand-500 text-center relative overflow-hidden">
-                <div class="relative z-10">
-                    <h2 class="text-3xl lg:text-4xl font-display font-black text-brand-950 mb-8 tracking-tight">100% Satisfaction Guaranteed</h2>
-                    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-10 leading-relaxed font-bold">
-                        Try Prostate Max for 60 days, completely risk-free. If you’re not satisfied for any reason, simply contact our support team for a full refund.
+                <div class="relative z-10 text-center">
+                    <h2 class="text-3xl lg:text-4xl font-display font-black text-brand-950 mb-8 tracking-tight text-center">100% Satisfaction Guaranteed</h2>
+                    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-10 leading-relaxed font-medium text-center">
+                        Try Prostate Max for 60 days, completely risk-free. If you’re not satisfied for any reason, simply contact our support team and request a full refund.
                     </p>
                     <a href="https://69f18fmdtp4ydyec2e4fgonkpx.hop.clickbank.net" class="inline-flex items-center justify-center px-12 py-4 bg-brand-500 text-white rounded-full text-lg font-black uppercase tracking-tight shadow-md hover:scale-105 transition-all">Start Risk-Free Trial</a>
                 </div>
@@ -362,23 +359,23 @@
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-4xl font-display font-black text-center text-brand-950 mb-16 tracking-tight">Frequently Asked Questions</h2>
             <div class="space-y-4">
-                <details class="group bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
-                    <summary class="flex items-center justify-between p-6 cursor-pointer font-black select-none text-brand-950 hover:bg-brand-100/20 text-lg">
+                <details class="group bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 shadow-sm text-left">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-black select-none text-brand-950 hover:bg-brand-100/20 text-lg text-left text-brand-950">
                         How long before I notice results?
                         <svg class="h-6 w-6 transition-transform group-open:rotate-180 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M19 9l-7 7-7-7" /></svg>
                     </summary>
-                    <div class="p-6 pt-0 text-gray-700 leading-relaxed border-t border-brand-50 font-bold">
+                    <div class="p-6 pt-0 text-gray-700 leading-relaxed border-t border-brand-50 font-bold text-left">
                         Most users begin to notice improvements within a few weeks of consistent use. For best results, we recommend daily use as part of your morning routine.
                     </div>
                 </details>
 
-                <details class="group bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
-                    <summary class="flex items-center justify-between p-6 cursor-pointer font-black select-none text-brand-950 hover:bg-brand-100/20 text-lg">
+                <details class="group bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 shadow-sm text-left">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-black select-none text-brand-950 hover:bg-brand-100/20 text-lg text-left text-brand-950">
                         Is it safe for daily use?
                         <svg class="h-6 w-6 transition-transform group-open:rotate-180 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M19 9l-7 7-7-7" /></svg>
                     </summary>
-                    <div class="p-6 pt-0 text-gray-700 leading-relaxed border-t border-brand-50 font-bold">
-                        Yes. The formula is made with carefully selected plant-based ingredients. We always recommend consulting with your healthcare provider before starting any new dietary supplement.
+                    <div class="p-6 pt-0 text-gray-700 leading-relaxed border-t border-brand-50 font-bold text-left">
+                        Yes. The formula is made with carefully selected plant-based ingredients. However, we always recommend consulting with your healthcare provider before starting any new dietary supplement.
                     </div>
                 </details>
             </div>
@@ -387,12 +384,12 @@
 
     <!-- FINAL CTA -->
     <section class="py-24 authority-gradient text-white text-center px-4 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-accent-500/50"></div>
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl lg:text-7xl font-display font-black mb-8 leading-tight tracking-tighter">Take Control Today</h2>
-            <p class="text-lg lg:text-xl text-brand-100 mb-12 max-w-2xl mx-auto font-bold opacity-90">Secure your 70% discount while supplies last. Don't let discomfort dictate your routine any longer.</p>
-            <a href="https://69f18fmdtp4ydyec2e4fgonkpx.hop.clickbank.net" class="inline-flex items-center justify-center px-14 py-7 bg-white text-brand-500 rounded-full text-2xl font-black uppercase tracking-tight shadow-2xl hover:scale-105 transition-all cta-pulse">Claim My 70% Discount Now</a>
-            <p class="mt-8 text-[10px] font-black uppercase tracking-[0.4em] opacity-60">⚠️ Authorized Independent Distributor • Fast Shipping</p>
+        <div class="absolute top-0 left-0 w-full h-1 bg-accent-500/50 text-center"></div>
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl lg:text-7xl font-display font-black mb-8 leading-tight tracking-tighter text-center">Take Control Today</h2>
+            <p class="text-lg lg:text-xl text-brand-100 mb-12 max-w-2xl mx-auto font-bold opacity-90 text-center text-left">Secure your 50% discount while supplies last. Don't let discomfort dictate your routine any longer.</p>
+            <a href="https://69f18fmdtp4ydyec2e4fgonkpx.hop.clickbank.net" class="inline-flex items-center justify-center px-14 py-7 bg-white text-brand-500 rounded-full text-2xl font-black uppercase tracking-tight shadow-2xl hover:scale-105 transition-all cta-pulse">Claim My 50% Discount Now</a>
+            <p class="mt-8 text-[10px] font-black uppercase tracking-[0.4em] opacity-60 text-center uppercase">⚠️ Authorized Independent Distributor Supply</p>
         </div>
     </section>
 
@@ -401,9 +398,9 @@
         <div class="max-w-7xl mx-auto px-4 flex flex-col items-center text-center">
             <a href="/" class="flex items-center gap-3 mb-8">
                 <img src="images/faviconV2.png" alt="Logo" class="h-10 w-auto brightness-0 invert">
-                <span class="font-display font-black text-3xl uppercase tracking-tighter">PROSTATE<span class="text-brand-500">MAX</span></span>
+                <span class="font-display font-black text-3xl uppercase tracking-tighter text-white">PROSTATE<span class="text-brand-500">MAX</span></span>
             </a>
-            <p class="text-gray-400 text-xs font-black uppercase tracking-[0.3em] mb-10">
+            <p class="text-gray-400 text-xs font-black uppercase tracking-[0.3em] mb-10 text-center">
                 Authorized Independent Distributor Platform
             </p>
             <div class="flex gap-8 mb-10 text-[10px] font-black uppercase tracking-widest text-gray-500">
@@ -411,7 +408,7 @@
                 <button onclick="openModal('modal-terms')" class="hover:text-white transition-colors">Terms of Service</button>
                 <button onclick="openModal('modal-help')" class="hover:text-white transition-colors">Support</button>
             </div>
-            <p class="text-gray-500 text-[10px] font-black uppercase tracking-widest">
+            <p class="text-gray-500 text-[10px] font-black uppercase tracking-widest text-center">
                 &copy; 2026 Prostate Max. Authorized Platform. All Rights Reserved.
             </p>
         </div>
@@ -419,12 +416,12 @@
 
     <!-- FDA COMPLIANCE -->
     <section class="bg-black py-16 text-center px-4">
-        <div class="max-w-5xl mx-auto space-y-8">
-            <p class="text-[11px] text-gray-500 leading-relaxed max-w-4xl mx-auto font-bold">
+        <div class="max-w-5xl mx-auto space-y-8 text-center">
+            <p class="text-[11px] text-gray-500 leading-relaxed max-w-4xl mx-auto font-bold text-center">
                 *The statements on this website have not been evaluated by the Food and Drug Administration. This product is a dietary supplement and is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary based on physiological profile. Always consult with a healthcare professional before starting any new dietary supplement program.
             </p>
-            <div class="h-px w-24 bg-white/10 mx-auto"></div>
-            <p class="text-[9px] text-gray-600 uppercase tracking-[0.5em] font-black">Official Independent Distributor Supply</p>
+            <div class="h-px w-24 bg-white/10 mx-auto text-center"></div>
+            <p class="text-[9px] text-gray-600 uppercase tracking-[0.5em] font-black text-center">Official Independent Distributor Supply</p>
         </div>
     </section>
 
@@ -447,7 +444,7 @@
         const modalData = {
             'modal-privacy': `<h3 class="text-4xl font-display font-black text-brand-50 mb-8 text-left bg-brand-500 p-4 rounded-xl">Privacy Policy</h3><p class="text-left mb-6 text-lg">Your privacy and data security are our top priorities. All interactions on this platform are protected by industry-standard SSL encryption.</p>`,
             'modal-terms': `<h3 class="text-4xl font-display font-black text-brand-50 mb-8 text-left bg-brand-500 p-4 rounded-xl">Terms of Service</h3><p class="text-left mb-6 text-lg">By using this platform, you agree to our terms of service and authorized distribution standards.</p>`,
-            'modal-help': `<h3 class="text-4xl font-display font-black text-brand-50 mb-8 text-left bg-brand-500 p-4 rounded-xl">Support</h3><p class="text-left mb-8 text-xl font-black text-brand-500">support@prostatemax.com</p>`
+            'modal-help': `<h3 class="text-4xl font-display font-black text-brand-50 mb-8 text-left bg-brand-500 p-4 rounded-xl">Support</h3><p class="text-left mb-8 text-xl font-black text-brand-500 text-brand-500">support@prostatemax.com</p>`
         };
 
         function openModal(id) {
